@@ -40,10 +40,12 @@ public class DirectorioTelefonico {
          }
          return clientes;
      }
-     void borrarCliente(int dni){
-         for(Long tel : directorio.keySet()){ 
-          Cliente c=directorio.get(tel);
-           if(c.getDni()==(dni)){ directorio.remove(tel);}
+     public void borrarCliente(int dni){
+         Map<Long,Cliente> borrar = new TreeMap<>();
+         borrar.putAll(directorio);
+         for(Long tel : borrar.keySet()){ 
+          Cliente c=borrar.get(tel);
+           if(c.getDni()==dni){ directorio.remove(tel);}
          }
      }
 }

@@ -18,9 +18,13 @@ public class TpdeLaboratorio7 {
     telefonica.agregarCliente(2664034545L , c3);
     telefonica.agregarCliente(2664034554L , c4);
     telefonica.agregarCliente(2664034423L , c5);
+    
         System.out.println(telefonica.buscarCliente(2664001223L));
         System.out.println(telefonica.buscarTelefono("Sosa"));
+        System.out.println(telefonica.buscarClientes("San Luis")); 
+        telefonica.borrarCliente(22222);       
         System.out.println(telefonica.buscarClientes("San Luis"));
+
         
         
         
